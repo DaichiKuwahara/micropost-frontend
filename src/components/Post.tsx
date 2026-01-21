@@ -4,8 +4,15 @@ import styled from "styled-components";
 import { UserContext } from "../providers/UserProvider";
 import { deletePost, updatePost } from "../api/Post";
 import { Link } from "react-router-dom";
+import type { PostType } from "../providers/PostListProvider";
+// 型定義を追加
+type PostProps = {
+  post: PostType;
+  onReload?: () => void;
+};
 
-export default function Post(props: any) {
+
+export default function Post(props: PostProps) {
   const { post, onReload } = props;
   const { userInfo } = React.useContext(UserContext);
   const [isEditing, setIsEditing] = useState(false);
@@ -84,49 +91,49 @@ export default function Post(props: any) {
 }
 
 const SPost = styled.div`
-  margin: 8px 0px;
-  border-bottom: 1px solid #AAAAAA;
+  margin: 0.5rem 0rem;
+  border-bottom: 0.0625rem solid #AAAAAA;
   text-align: left;
-  padding-left: 8px;
+  padding-left: 0.5rem;
 `
 const SName = styled.span`
   font-size: small;
   color: #000044;
 `
 const SDate = styled.span`
-  margin-left: 8px;
+  margin-left: 0.5rem;
   font-size: small;
   color: #000044;
 `
 
 const SEditButton = styled.button`
   outline: none;
-  padding: 2px 10px;
-  border-radius: 4px;
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.25rem;
   color: white;
   cursor: pointer;
-  margin-top: 2px;
-  margin-right: 4px;
-  margin-bottom: 2px;
+  margin-top: 0.125rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.125rem;
   background-color: #39c65aff;
 `;
 
 const SDeleteButton = styled.button`
   outline: none;
-  padding: 2px 10px;
-  border-radius: 4px;
+  padding: 0.125rem 0.625rem;
+  border-radius: 0.25rem;
   color: white;
   cursor: pointer;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
   background-color: #f03f51ff;
 `;
 
 const SButton = styled.button`
   background-color: #222222;
-  padding: 4px;
-  border-radius: 8px;
-  margin-right: 2px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-right: 0.125rem;
   color: #FAFAFA;
   cursor: pointer;
 `

@@ -40,9 +40,9 @@ export default function Register() {
 
 const SButton = styled.button`
   background-color: #222222ff;
-  padding: 4px;
-  border-radius: 8px;
-  margin-right: 2px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  margin-right: 0.125rem;
   cursor: pointer;
   color: #FAFAFA;
 `

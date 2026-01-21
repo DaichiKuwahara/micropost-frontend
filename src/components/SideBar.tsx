@@ -18,7 +18,7 @@ export default function SideBar() {
     let postList: Array<PostType> = [];
     if (posts && posts.records) {
       console.log(posts);
-      posts.records.forEach((p: any) => {
+      posts.records.forEach((p: PostType) => {
         postList.push({
           id: p.id,
           user_id: p.user_id,
@@ -64,32 +64,33 @@ export default function SideBar() {
 }
 
 const SSideBar = styled.div`
-  padding: 8px;
+  padding: 0.5rem;
 `
 
 const SSideBarRow = styled.div`
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
   text-align: left;
 `
 
 const SSideBarTextArea = styled.textarea`
-  border-radius: 4px;
-  box-shadow: inset 0 2px 4px #CCCCCC;
+  border-radius: 0.25rem;
+  box-shadow: inset 0 0.125rem 0.25rem #CCCCCC;
 `
 
 const SSideBarButton = styled.button`
   background-color: #222222;
-  padding: 4px;
-  border-radius: 8px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
   color: #FAFAFA;
   width: 100%;
   cursor: pointer;
 `
 
 const SUserIcon = styled.img`
-  height: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #ddd;
+  border: 0.0625rem solid #ddd;
 `

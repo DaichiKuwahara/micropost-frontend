@@ -38,14 +38,14 @@ const SHeader = styled.div`
   display: flex;
   flex-direction: row;
   color: #F8F8F8;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   height: 100%;
 `
 
 const SLogo = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-align: center;
   justify-content: start;
 `
@@ -58,14 +58,14 @@ const SRightItem = styled.div`
 `
 
 const SName = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-align: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 `
 
 const SLogout = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-align: center;
 `
